@@ -1,3 +1,6 @@
+# 设置服务器端口为8081
+server:
+  port: 8081
 langchain4j:
   open-ai:
     chat-model:
@@ -28,11 +31,6 @@ logging:
   level:
     dev.langchain4j: debug #日志级别
 
-# 设置服务器端口为8081
-server:
-  port: 8081
-
-
 spring:
   data:
     redis:
@@ -45,21 +43,6 @@ spring:
     password: 123666888
     url: jdbc:mysql://localhost:3306/volunteer?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
-
-#  datasource:
-#    url: >-
-#      jdbc:mysql://localhost:3307/volunteer?
-#      useUnicode=true&
-#      characterEncoding=utf-8&
-#      useSSL=false&
-#      serverTimezone=Asia/Shanghai&
-#      allowPublicKeyRetrieval=true
-#    username: root
-#    password: 123666888  # 添加引号避免特殊字符问题
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    hikari:
-#      connection-timeout: 30000  # 增加连接池配置
-#      maximum-pool-size: 10
 
 mybatis:
   configuration:

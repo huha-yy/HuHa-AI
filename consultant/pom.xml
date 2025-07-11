@@ -8,7 +8,7 @@
         <version>3.5.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.itheima</groupId>
+    <groupId>com.huha</groupId>
     <artifactId>consultant</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>consultant</name>
