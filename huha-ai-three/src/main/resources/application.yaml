@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: huha-ai
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: deepseek-r1:latest
+    openai:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      api-key: ${API-KEY}
+      chat:
+        options:
+          model: qwen-max-latest
+          temperature: 0.8
+      embedding:
+        options:
+          model: text-embedding-v3
+          dimensions: 1024 #向量维度
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/huha?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&allowPublicKeyRetrieval=true&allowMultiQueries=true&useServerPrepStmts=false
+    username: root
+    password: 123666888
+
+  data:
+    redis:
+      host: 127.0.0.1  # Redis 服务器 IP
+      port: 6379             # Redis 端口（默认 6379，如果未修改可省略此行）
+#      password: 123666888 # Redis 密码
+      database: 0            # 使用的数据库编号（默认 0，按需修改）
+      # 其他可选参数（按需添加）
+      timeout: 5000         # 连接超时时间（毫秒）
+      lettuce:
+        pool:
+          max-active: 8    # 最大连接数
+          max-idle: 4       # 最大空闲连接
+          min-idle: 1       # 最小空闲连接
+
+logging:
+  level:
+    org.springframework.ai: debug
+    com.huha.ai: debug
+

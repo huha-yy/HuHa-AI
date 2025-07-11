@@ -1,0 +1,66 @@
+langchain4j:
+  open-ai:
+    chat-model:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      api-key: ${API-KEY}
+      model-name: qwen-plus
+      log-requests: true #请求消息日志
+      log-responses: true #响应消息日志
+    streaming-chat-model:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      api-key: ${API-KEY}
+      model-name: qwen-plus
+      log-requests: true #请求消息日志
+      log-responses: true #响应消息日志
+    embedding-model:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      api-key: ${API-KEY}
+      model-name: text-embedding-v3
+      log-requests: true #请求消息日志
+      log-responses: true #响应消息日志
+      max-segments-per-batch: 10
+  community:
+    redis:
+      host: localhost
+      port: 6380
+
+logging:
+  level:
+    dev.langchain4j: debug #日志级别
+
+# 设置服务器端口为8081
+server:
+  port: 8081
+
+
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6380
+      database: 0            # 使用的数据库编号（默认 0，按需修改）
+
+  datasource:
+    username: root
+    password: 123666888
+    url: jdbc:mysql://localhost:3306/volunteer?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#  datasource:
+#    url: >-
+#      jdbc:mysql://localhost:3307/volunteer?
+#      useUnicode=true&
+#      characterEncoding=utf-8&
+#      useSSL=false&
+#      serverTimezone=Asia/Shanghai&
+#      allowPublicKeyRetrieval=true
+#    username: root
+#    password: 123666888  # 添加引号避免特殊字符问题
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    hikari:
+#      connection-timeout: 30000  # 增加连接池配置
+#      maximum-pool-size: 10
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
