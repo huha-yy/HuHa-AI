@@ -267,9 +267,9 @@ npm run build
 
 ## 联系方式
 
-- 项目维护者: [您的名字]
-- 电子邮箱: [您的邮箱]
-- 项目仓库: [GitHub仓库链接]
+- 项目维护者: huha
+- 电子邮箱: 2856234031@qq.com
+- 项目仓库: https://github.com/huha-yy/HuHa-AI.git
 
 ---
 
