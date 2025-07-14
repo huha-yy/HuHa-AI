@@ -273,4 +273,4 @@ npm run build
 
 ---
 
-© 2024 HuHa-AI 项目团队
+© 2025 HuHa-AI 项目团队
